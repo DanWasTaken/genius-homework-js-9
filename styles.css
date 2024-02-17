@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+* {
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-text: #C0C3C6;
+  --clr-title: #F7FAFF;
+  --clr-body-background: #0E0E0F;
+  --clr-content-background: #1A1A1C;
+  --clr-content-border: #262628;
+  --clr-btn: #1B1C1E;
+  --clr-btn-hover: #47B8E8;
+  --clr-btn-active: #82CEED;
+}
+
+body {
+  background-color: var(--clr-body-background);
+  color: var(--clr-text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1, h2, h3 {
+  color: var(--clr-title);
+}
+
+ul {
+  line-height: 1.7;
+}
+
+button {
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--clr-title);
+  background-color: transparent;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  border: 2px solid var(--clr-btn-hover);
+  transition: background-color 0.2s, border 0.2s;
+
+  &:hover {
+    background-color: var(--clr-btn-hover);
+  }
+
+  &:active {
+    background-color: var(--clr-btn-active);
+    border: 2px solid var(--clr-btn-active);
+  }
+}
+
+.task-container {
+  background-color: var(--clr-content-background);
+  border: 2px solid var(--clr-content-border);
+  border-radius: 1rem;
+
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  width: 40%;
+
+  text-align: center;
+}
