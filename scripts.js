@@ -30,8 +30,10 @@ const ex3 = () => {
 
   for(let childList of childLists) {
     if (childList.parentElement) {
-      childList.parentElement.addEventListener('click', () => {
-        childList.hidden === false ? childList.hidden = true : childList.hidden = false;
+      childList.parentElement.addEventListener('click', (e) => {
+        if (e.target === childList.parentElement) {
+          childList.hidden === false ? childList.hidden = true : childList.hidden = false;
+        }
       })
     }
   }
